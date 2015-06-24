@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} 
+  修改学生信息
+{% end %}
+
+{% block content %} 
+	<a href="/stulist">返回学生清单</a>
+	<p></p>
+	<form action="/stuedit/{{student['stu_sn']}}" method="post">
+    <p>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  号:<input type="text" name="stu_no" value="{{student['stu_no']}}"></p>
+    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  名:<input type="text" name="sname" value="{{student['sname']}}"> </p>
+    <p>出生日期:<input type="text" name="birthday" value="{{student['birthday']}}"> </p>
+    <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  别:<input type="text" name="sex" value="{{student['sex']}}"></p>
+    <p>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  级:<input type="text" name="sclass" value="{{student['sclass']}}"></p>
+    
+    <input type="submit" value="提 交"/>
+    </form>
+    </div>
+{% end %}
